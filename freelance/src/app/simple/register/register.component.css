@@ -1,0 +1,11 @@
+
+.card-panel{
+  border-radius: 30px;
+  position: relative;
+  top: 4rem;
+}
+
+.btn{
+  background-color: #8BC34A !important;
+  border-radius: 30px;
+}
