@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PortalComponent } from './simple/portal/portal.component';
 import { LoginComponent } from './simple/login/login.component';
 import { RegisterComponent } from './simple/register/register.component';
+import { PanelUsuarioComponent } from './panel/user/panel-usuario/panel-usuario.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegisterComponent } from './simple/register/register.component';
     AppComponent,
     PortalComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PanelUsuarioComponent
   ],
   imports: [
     BrowserModule,

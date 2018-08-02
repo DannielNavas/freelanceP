@@ -6,15 +6,18 @@
   </div>
   <div class="container">
     <div class="row">
+      <div class="col s12 center">
+        <h2 class="contractus-font">Contractus</h2>
+      </div>
       <div class="col s12">
         <div class="row">
-          <div class="col s12 m12 l6 offset-l3">
-            <div class="card-panel white z-depth-5">
-              <div class="row">
+          <div class="col s12 m12 l10 offset-l1">
+            <div class="card-panel white z-depth-2">
+              <div class="row row-footer">
                 <div class="col s12 center-align">
-                  <h1>Login</h1>
+                  <h3>Login</h3>
                 </div>
-                <form class="col s12">
+                <form class="col s12 m12 l6">
                   <div class="row">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">account_circle</i>
@@ -26,13 +29,45 @@
                       <input id="icon_password" type="password" class="validate" required>
                       <label for="icon_password">Password</label>
                     </div>
+                    <div class="s11 center">
+                      <button class="btn waves-effect waves-light indigo  btn-large" type="submit">Iniciar
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </div>
+                    <div class="col s6">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span>Recuerdame</span>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="col s6">
+                      <a routerLink="/">Olvide mi contraseña</a>
+                    </div>
+                    <div class="col s12 center">
+                      <p>¿No tienes una cuenta?
+                        <a routerLink="/register">Crea una cuenta</a>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+                <div class="col s12 m12 l5 offset-l1 contractus-mt1">
+                  <div class="row">
                     <div class="s12 center">
-                      <button class="btn waves-effect waves-light color-free btn-large" type="submit">Iniciar
+                      <button class="btn waves-effect waves-light btn-facebook btn-large" type="submit">Iniciar con Facebook
                         <i class="material-icons right">send</i>
                       </button>
                     </div>
                   </div>
-                </form>
+                  <div class="row">
+                    <div class="s12 center">
+                      <button class="btn waves-effect waves-light btn-twitter btn-large" type="submit">Iniciar con Twuitter
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

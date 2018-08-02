@@ -1,25 +1,38 @@
-.nav-free{
-	background-color: #3F51B5;
+.nav-free {
+  background-color: #3F51B5;
 }
+
 .parallax-container {
   height: 550px;
 }
-.contractus-banner{
+
+.parallax-contractus {
+  transform: skewY(-10deg);
+  overflow: hidden;
+  transform-origin: 0;
+}
+
+.contractus-banner {
   position: relative;
   top: 100px;
 }
-.contractus-mt1{
+
+.contractus-mt1 {
   margin-top: 40px;
 }
-.btn-register{
+
+.btn-register {
   background-color: #8BC34A !important;
   border-radius: 30px;
 }
-.btn-login{
+
+.btn-login {
   background-color: white !important;
   border-radius: 30px;
   color: black;
 }
-h5, h1.white-text{
+
+h5,
+h1.white-text {
   text-shadow: 1px 1px 2px black;
 }
