@@ -11,6 +11,7 @@ import { PortalComponent } from './simple/portal/portal.component';
 import { LoginComponent } from './simple/login/login.component';
 import { RegisterComponent } from './simple/register/register.component';
 import { PanelUsuarioComponent } from './panel/user/panel-usuario/panel-usuario.component';
+import { RegisterProjectComponent } from './simple/register-project/register-project.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PanelUsuarioComponent } from './panel/user/panel-usuario/panel-usuario.
     PortalComponent,
     LoginComponent,
     RegisterComponent,
-    PanelUsuarioComponent
+    PanelUsuarioComponent,
+    RegisterProjectComponent
   ],
   imports: [
     BrowserModule,

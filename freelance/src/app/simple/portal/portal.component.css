@@ -12,9 +12,19 @@
   transform-origin: 0;
 }
 
+.parallax-contractus img {
+  transform: skewY(10deg);
+  background-size: cover;
+  transform-origin: 0;
+}
+
 .contractus-banner {
   position: relative;
   top: 100px;
+}
+
+.contractus-font {
+  font-family: 'Pacifico', cursive;
 }
 
 .contractus-mt1 {
@@ -27,12 +37,13 @@
 }
 
 .btn-login {
-  background-color: white !important;
+  background-color: transparent !important;
   border-radius: 30px;
-  color: black;
+  color: white;
+  border: 3px solid white;
 }
 
 h5,
 h1.white-text {
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 3px 3px 4px black;
 }

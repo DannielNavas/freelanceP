@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from '../simple/register/register.component';
 import { LoginComponent } from '../simple/login/login.component';
 import { PortalComponent } from '../simple/portal/portal.component';
+import { RegisterProjectComponent } from '../simple/register-project/register-project.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'new-project',
+    component: RegisterProjectComponent,
   },
   {
     path: 'login',
