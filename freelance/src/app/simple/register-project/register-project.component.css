@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #C5CAE9;
+  background-image: url('https://soyemprendedor.co/wp-content/uploads/2018/06/startup.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-panel {
