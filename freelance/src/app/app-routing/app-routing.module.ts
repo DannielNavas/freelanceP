@@ -8,6 +8,9 @@ import { RegisterComponent } from '../simple/register/register.component';
 import { LoginComponent } from '../simple/login/login.component';
 import { PortalComponent } from '../simple/portal/portal.component';
 import { RegisterProjectComponent } from '../simple/register-project/register-project.component';
+import { NewuserComponent } from '../simple/newuser/newuser.component';
+import { ForgetPasswordComponent } from '../simple/forget-password/forget-password.component';
+import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario.component';
 
 const routes: Routes = [
   {
@@ -25,6 +28,18 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'new',
+    component: NewuserComponent,
+  },
+  {
+    path: 'forget-password',
+    component: ForgetPasswordComponent,
+  },
+  {
+    path: 'portal',
+    component: PanelUsuarioComponent,
   },
 ];
 

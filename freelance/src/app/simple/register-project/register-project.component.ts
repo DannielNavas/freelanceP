@@ -6,8 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-project.component.css']
 })
 export class RegisterProjectComponent implements OnInit {
-  selectedProject: string = '0';
+  selectedProject = '0';
+  button = false;
+  contador = 0;
   constructor() { }
+
+
+  selectedTypeProject() {
+    if (!this.button) {
+      this.button = true;
+    } else if (this.button) {
+      this.button = false;
+    }
+  }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-panel-usuario',
@@ -10,6 +11,10 @@ export class PanelUsuarioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+      $('.parallax').parallax();
+    });
   }
 
 }
