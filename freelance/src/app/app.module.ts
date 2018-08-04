@@ -14,6 +14,7 @@ import { PanelUsuarioComponent } from './panel/user/panel-usuario/panel-usuario.
 import { RegisterProjectComponent } from './simple/register-project/register-project.component';
 import { NewuserComponent } from './simple/newuser/newuser.component';
 import { ForgetPasswordComponent } from './simple/forget-password/forget-password.component';
+import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ForgetPasswordComponent } from './simple/forget-password/forget-passwor
     PanelUsuarioComponent,
     RegisterProjectComponent,
     NewuserComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    VerOfertasComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { RegisterProjectComponent } from '../simple/register-project/register-pr
 import { NewuserComponent } from '../simple/newuser/newuser.component';
 import { ForgetPasswordComponent } from '../simple/forget-password/forget-password.component';
 import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario.component';
+import { VerOfertasComponent } from '../panel/user/ver-ofertas/ver-ofertas.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'portal',
     component: PanelUsuarioComponent,
+  },
+  {
+    path: 'ofertas',
+    component: VerOfertasComponent,
   },
 ];
 
