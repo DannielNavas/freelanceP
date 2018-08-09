@@ -12,6 +12,7 @@ import { NewuserComponent } from '../simple/newuser/newuser.component';
 import { ForgetPasswordComponent } from '../simple/forget-password/forget-password.component';
 import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario.component';
 import { VerOfertasComponent } from '../panel/user/ver-ofertas/ver-ofertas.component';
+import { PerfilComponent } from '../panel/user/perfil/perfil.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'ofertas',
     component: VerOfertasComponent,
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent,
   },
 ];
 

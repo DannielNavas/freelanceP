@@ -6,12 +6,6 @@
   height: 550px;
 }
 
-.parallax-contractus img {
-  transform: skewY(10deg);
-  background-size: cover;
-  transform-origin: 0;
-}
-
 .contractus-banner {
   position: relative;
   top: 100px;
@@ -35,4 +29,9 @@
   border-radius: 30px;
   color: white;
   border: 3px solid white;
+}
+
+h5,
+h1.white-text {
+  text-shadow: 3px 3px 4px black;
 }
