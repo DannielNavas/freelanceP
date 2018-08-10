@@ -3,7 +3,7 @@
 }
 
 .parallax-container {
-  height: 550px;
+  height: 300px;
 }
 
 .parallax-contractus img {
@@ -35,9 +35,4 @@
   border-radius: 30px;
   color: white;
   border: 3px solid white;
-}
-
-h5,
-h1.white-text {
-  text-shadow: 3px 3px 4px black;
 }
