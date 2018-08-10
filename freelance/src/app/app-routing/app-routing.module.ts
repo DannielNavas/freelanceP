@@ -13,6 +13,8 @@ import { ForgetPasswordComponent } from '../simple/forget-password/forget-passwo
 import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario.component';
 import { VerOfertasComponent } from '../panel/user/ver-ofertas/ver-ofertas.component';
 import { PerfilComponent } from '../panel/user/perfil/perfil.component';
+import { ContratosComponent } from '../panel/billing/contratos/contratos.component';
+import { OfertasviewComponent } from '../panel/user/ofertasview/ofertasview.component';
 
 const routes: Routes = [
   {
@@ -50,6 +52,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     component: PerfilComponent,
+  },
+  {
+    path: 'veroferta',
+    component: OfertasviewComponent,
   },
 ];
 

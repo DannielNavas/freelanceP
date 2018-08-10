@@ -16,6 +16,13 @@ import { NewuserComponent } from './simple/newuser/newuser.component';
 import { ForgetPasswordComponent } from './simple/forget-password/forget-password.component';
 import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.component';
 import { PerfilComponent } from './panel/user/perfil/perfil.component';
+import { BasicoComponent } from './panel/formularios/basico/basico.component';
+import { ProfesionalComponent } from './panel/formularios/profesional/profesional.component';
+import { PortafolioComponent } from './panel/formularios/portafolio/portafolio.component';
+import { FacturacionComponent } from './panel/billing/facturacion/facturacion.component';
+import { ContratosComponent } from './panel/billing/contratos/contratos.component';
+import { ContractusComponent } from './panel/user/contractus/contractus.component';
+import { OfertasviewComponent } from './panel/user/ofertasview/ofertasview.component';
 
 
 @NgModule({
@@ -29,7 +36,14 @@ import { PerfilComponent } from './panel/user/perfil/perfil.component';
     NewuserComponent,
     ForgetPasswordComponent,
     VerOfertasComponent,
-    PerfilComponent
+    PerfilComponent,
+    BasicoComponent,
+    ProfesionalComponent,
+    PortafolioComponent,
+    FacturacionComponent,
+    ContratosComponent,
+    ContractusComponent,
+    OfertasviewComponent
   ],
   imports: [
     BrowserModule,
