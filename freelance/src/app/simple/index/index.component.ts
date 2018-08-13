@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 declare var $: any;
 
 @Component({
-  selector: 'app-portal',
-  templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class PortalComponent implements OnInit {
+export class IndexComponent implements OnInit {
 
   constructor() { }
 
