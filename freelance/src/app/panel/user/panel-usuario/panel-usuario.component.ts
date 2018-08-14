@@ -10,6 +10,10 @@ export class PanelUsuarioComponent implements OnInit {
 
   constructor() { }
 
+  buscar() {
+    console.log('Busqueda');
+  }
+
   ngOnInit() {
     $(document).ready(function () {
       $('.sidenav').sidenav();

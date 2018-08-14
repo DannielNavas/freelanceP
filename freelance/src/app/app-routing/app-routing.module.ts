@@ -11,6 +11,8 @@ import { NewuserComponent } from '../simple/newuser/newuser.component';
 import { ForgetPasswordComponent } from '../simple/forget-password/forget-password.component';
 import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario.component';
 import { PerfilComponent } from '../panel/user/perfil/perfil.component';
+import { OfertasviewComponent } from '../panel/user/ofertasview/ofertasview.component';
+import { VerOfertasComponent } from '../panel/user/ver-ofertas/ver-ofertas.component';
 
 
 
@@ -46,6 +48,14 @@ const routes: Routes = [
   {
     path: 'perfil',
     component: PerfilComponent
+  },
+  {
+    path: 'viewofertas',
+    component: OfertasviewComponent
+  },
+  {
+    path: 'ofertas',
+    component: VerOfertasComponent
   }
 ];
 
