@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 /*Routing*/
 import { AppRoutingModule } from './app-routing/app-routing.module';
+
+/*Service*/
+import { LoginService } from './service/login.service';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './simple/index/index.component';
@@ -44,9 +48,12 @@ import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

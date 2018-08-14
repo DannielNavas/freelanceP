@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+declare var $: any;
+
+
 
 @Component({
   selector: 'app-login',
