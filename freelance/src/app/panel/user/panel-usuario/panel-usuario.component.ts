@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -8,7 +9,13 @@ declare var $: any;
 })
 export class PanelUsuarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  login = localStorage.getItem('login');
+
+  salir() {
+    localStorage.removeItem('login');
+    this.router.navigate(["/"]);
+  }
 
   buscar() {
     console.log('Busqueda');

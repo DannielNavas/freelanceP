@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 
-
+/*Service */
+import { LoginService } from "../../service/login.service";
+/*Models */
+import { Login } from "../../models/login";
 
 @Component({
   selector: 'app-login',
@@ -11,9 +14,26 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-  iniciar() {
+  constructor(private loginService: LoginService, private router: Router) { }
 
+  loginArray: Login[] = [];
+  selectedLogin: Login = new Login();
+  datos[];
+  resp: boolean = false;
+  iniciar() {
+    this.loginArray.push(this.selectedLogin);
+    console.log(this.loginArray);
+    this.loginService.login(this.loginArray).subscribe(data => {
+      this.datos = data;
+      console.log(this.datos);
+      if (this.datos.respuesta === 'Success') {
+        console.log('ok');
+        localStorage.setItem('login', 'true');
+        this.router.navigate(["/portal"]);
+      } else if (this.datos.respuesta === 'Usuario y/o contraseña no son validos') {
+        this.resp = true;
+      }
+    });
   }
   ngOnInit() {
   }

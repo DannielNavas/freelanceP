@@ -1,97 +1,110 @@
-<nav class="nav-free">
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Contractus</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul class="right hide-on-med-and-down">
-      <li>
-        <a routerLink="/portal">Inicio</a>
-      </li>
-      <li>
-        <a routerLink="/perfil">Usuario</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<ul class="sidenav" id="mobile-demo">
-  <li>
-    <a routerLink="/portal">Inicio</a>
-  </li>
-  <li>
-    <a routerLink="/perfil">Usuario</a>
-  </li>
-</ul>
-<div class="parallax-container">
-  <div class="parallax parallax-contractus">
-    <img class="contractus-img" src="/assets/img/portal.png">
-  </div>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col s12 m12 l12 center">
-        <h1 class="white-text contractus-font">Contractus</h1>
-        <h5 class="white-text">Encuentra los mejores proyectos</h5>
-      </div>
-      <div class="row">
-        <div class="col s12 m12 l8 contractus-mt1 offset-l2">
-          <nav class="light-green">
-            <div class="nav-wrapper">
-              <form (submit)="buscar()">
-                <div class="input-field">
-                  <input id="search" type="search" required>
-                  <label class="label-icon" for="search">
-                    <i class="material-icons">search</i>
-                  </label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
-            </div>
-          </nav>
-        </div>
-      </div>
+<div *ngIf="login === 'true'">
+  <nav class="nav-free">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Contractus</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a routerLink="/portal">Inicio</a>
+        </li>
+        <li>
+          <a routerLink="/perfil">Usuario</a>
+        </li>
+        <li>
+          <a (click)="salir()">Salir</a>
+        </li>
+      </ul>
     </div>
-  </div>
-</div>
-<div class="section white">
-  <div class="row container-fluid">
-    <div class="col s12 m12 l4">
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <a routerLink="/portal">Inicio</a>
+    </li>
+    <li>
+      <a routerLink="/perfil">Usuario</a>
+    </li>
+    <li>
+      <a (click)="salir()">Salir</a>
+    </li>
+  </ul>
+  <div class="parallax-container">
+    <div class="parallax parallax-contractus">
+      <img class="contractus-img" src="/assets/img/portal.png">
+    </div>
+    <div class="container-fluid ">
       <div class="row">
-        <div class="col s12 center">
-          <img src="/assets/img/banner.jpg" alt="imagen usuario" class="resposive-img circle" style="height: 100px; width: 100px">
+        <div class="col s12 m12 l12 center">
+          <h1 class="white-text contractus-font">Contractus</h1>
+          <h5 class="white-text">Encuentra los mejores proyectos</h5>
         </div>
-        <div class="col s12 center">
-          <h4>Bienvenido: Luis Daniel Gordo Navas</h4>
-        </div>
-        <div class="col s12">
-          <h5>Ultimas Consultas</h5>
-          <div class="collection">
-            <a routerLink="" class="collection-item">Items</a>
+        <div class="row">
+          <div class="col s12 m12 l8 contractus-mt1 offset-l2">
+            <nav class="light-green">
+              <div class="nav-wrapper">
+                <form (submit)="buscar()">
+                  <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search">
+                      <i class="material-icons">search</i>
+                    </label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
     </div>
-    <div class="col s12 m12 l8">
-      <h4>Sugerencias de acuerdo a tu perfil: </h4>
-      <div class="collection">
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
-        <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+  </div>
+  <div class="section white">
+    <div class="row container-fluid">
+      <div class="col s12 m12 l4">
+        <div class="row">
+          <div class="col s12 center">
+            <img src="/assets/img/banner.jpg" alt="imagen usuario" class="resposive-img circle" style="height: 100px; width: 100px">
+          </div>
+          <div class="col s12 center">
+            <h4>Bienvenido: Luis Daniel Gordo Navas</h4>
+          </div>
+          <div class="col s12">
+            <h5>Ultimas Consultas</h5>
+            <div class="collection">
+              <a routerLink="" class="collection-item">Items</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l8">
+        <h4>Sugerencias de acuerdo a tu perfil: </h4>
+        <div class="collection">
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+          <a routerLink="" class="collection-item">Propuesta sugerencia</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<footer class="page-footer light-green">
-  <div class="footer-copyright">
-    <div class="container">
-      © 2014 Copyright Contractus
+  <footer class="page-footer light-green">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Contractus
+      </div>
     </div>
+  </footer>
+</div>
+<div *ngIf="login !== 'true'">
+  <div class="card-panel center">
+    <h4>Crea una cuenta para poder acceder</h4>
   </div>
-</footer>
+</div>
