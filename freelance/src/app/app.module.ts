@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 /*Service*/
 import { LoginService } from './service/login.service';
+import { CreateUserService } from './service/create-user.service';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './simple/index/index.component';
@@ -54,7 +55,8 @@ import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.compon
     HttpClientModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    CreateUserService
   ],
   bootstrap: [AppComponent]
 })
