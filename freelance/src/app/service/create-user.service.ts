@@ -13,7 +13,7 @@ export class CreateUserService {
   params;
   headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
   createUser(userData) {
-    this.params = 'email=' + userData[0].email + '&password=' + userData[0].password + '';
+    this.params = 'email=' + userData[0].email + '&user=' + userData[0].user + '&password=' + userData[0].password + '';
     return this.http.post<CreateUser[]>('http://127.0.0.1:3000/createuser', this.params, { headers: this.headers });
   }
 }

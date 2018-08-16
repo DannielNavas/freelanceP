@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+declare var $: any;
+
+/*Service */
+import { DatosBasicosService } from '../../../service/datos-basicos.service';
+/*Models */
+import { DatosBasicos } from '../../../models/datos-basicos';
 
 @Component({
   selector: 'app-basico',
@@ -7,7 +14,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicoComponent implements OnInit {
 
-  constructor() { }
+  datos: any = [];
+
+  constructor(private datosBasicosService: DatosBasicosService, private router: Router) {
+    this.datosBasicosService.getDataUser(localStorage.getItem('userIdC')).subscribe(data => {
+      this.datos = data;
+      console.log(data);
+    });
+
+  }
 
   ngOnInit() {
   }

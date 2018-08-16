@@ -3,9 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 /*Service */
-import { LoginService } from "../../service/login.service";
+import { LoginService } from '../../service/login.service';
 /*Models */
-import { Login } from "../../models/login";
+import { Login } from '../../models/login';
 
 @Component({
   selector: 'app-login',
@@ -18,18 +18,22 @@ export class LoginComponent implements OnInit {
 
   loginArray: Login[] = [];
   selectedLogin: Login = new Login();
-  datos[];
-  resp: boolean = false;
+  datos: any = [];
+  resp = false;
   iniciar() {
     this.loginArray.push(this.selectedLogin);
     console.log(this.loginArray);
     this.loginService.login(this.loginArray).subscribe(data => {
       this.datos = data;
-      console.log(this.datos);
       if (this.datos.respuesta === 'Success') {
-        console.log('ok');
         localStorage.setItem('login', 'true');
-        this.router.navigate(["/portal"]);
+        const primerInicio = localStorage.getItem('primerInicio');
+        if (primerInicio === 'true') {
+          localStorage.setItem('userIdC', this.datos.rows[0].id);
+          this.router.navigate(['/perfil']);
+        } else {
+          this.router.navigate(['/portal']);
+        }
       } else if (this.datos.respuesta === 'Usuario y/o contraseña no son validos') {
         this.resp = true;
       }

@@ -18,14 +18,20 @@ export class RegisterComponent implements OnInit {
 
   userArray: NewUser[] = [];
   selectedUser: NewUser = new NewUser();
-  datos[];
-  resp: boolean = false;
+  datos: any = [];
+  resp = false;
   registrarUser() {
     this.userArray.push(this.selectedUser);
     this.createUserService.createUser(this.userArray).subscribe(data => {
       this.datos = data;
       console.log(this.datos);
-    })
+      if (this.datos.respuesta === 'Success') {
+        localStorage.setItem('primerInicio', 'true');
+        this.router.navigate(['/login']);
+      } else if (this.datos.respuesta === 'Usuario y/o contraseña no son validos') {
+        this.resp = true;
+      }
+    });
   }
 
   ngOnInit() {

@@ -14,7 +14,8 @@ export class PanelUsuarioComponent implements OnInit {
 
   salir() {
     localStorage.removeItem('login');
-    this.router.navigate(["/"]);
+    localStorage.removeItem('userIdC');
+    this.router.navigate(['/']);
   }
 
   buscar() {
