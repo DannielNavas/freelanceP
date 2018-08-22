@@ -3,12 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 
-var login = require('./routes/login')
+var login = require('./routes/login');
 
-var app = express();
+
+// Initialize the app
+var app = express()
+app.use(bodyParser());  
+app.use(bodyParser.json({limit:'5mb'}));   
+app.use(bodyParser.urlencoded({extended:true})); 
+//access cors  
+app.use(function (req, res, next) {        
+     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');    
+     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');    
+     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');      
+     res.setHeader('Access-Control-Allow-Credentials', true);       
+     next();  
+ });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 app.post('/login', login)
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
