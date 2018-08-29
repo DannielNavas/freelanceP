@@ -13,6 +13,10 @@ import { PanelUsuarioComponent } from '../panel/user/panel-usuario/panel-usuario
 import { PerfilComponent } from '../panel/user/perfil/perfil.component';
 import { OfertasviewComponent } from '../panel/user/ofertasview/ofertasview.component';
 import { VerOfertasComponent } from '../panel/user/ver-ofertas/ver-ofertas.component';
+import { ProfesionalComponent } from '../panel/formularios/profesional/profesional.component';
+import { PortafolioComponent } from '../panel/formularios/portafolio/portafolio.component';
+import { ContratosComponent } from '../panel/billing/contratos/contratos.component';
+import { FacturacionComponent } from '../panel/billing/facturacion/facturacion.component';
 
 
 
@@ -56,7 +60,24 @@ const routes: Routes = [
   {
     path: 'ofertas',
     component: VerOfertasComponent
+  },
+  {
+    path: 'perfilProfesional',
+    component: ProfesionalComponent
+  },
+  {
+    path: 'portafolio',
+    component: PortafolioComponent
+  },
+  {
+    path: 'contratos',
+    component: ContratosComponent
+  },
+  {
+    path: 'facturacion',
+    component: FacturacionComponent
   }
+
 ];
 
 
