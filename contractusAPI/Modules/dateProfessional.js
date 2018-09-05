@@ -1,8 +1,3 @@
-var mysql = require('mysql')
-var enigma = require('enigma-code')
-
-const valorEncriptación = 10
-let key = 'Odin2019C'
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -13,15 +8,13 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var loginModel = {}
+var dateProfessionalModel = {}
 
-loginModel.getUserLogin = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.pass, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
-  var query = "select id, email, pass from users where email = '" + userData.email + "' and pass = '" + pass + "'"
+// get 
+registerModel.getDateProfessional = function (userData, callback) {
+  console.log(userData)
+  var query = "select * from dates_professional "
+
   if (connection) {
     connection.query(query, function (error, rows) {
       if (error) {
@@ -39,7 +32,7 @@ loginModel.getUserLogin = function (userData, callback) {
         } else {
           console.log("Error la consulta no arroja datos")
           callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
+            "respuesta": "Error los datos profesionales no se pueden consultar "
           })
         }
       }
@@ -54,83 +47,11 @@ loginModel.getUserLogin = function (userData, callback) {
 }
 
 
+// create 
+registerModel.createDateProfessional = function (userData, callback) {
+  console.log(userData)
+  var query = "INSERT INTO dates_professional (universidad, titulo, numero_diploma, acta_grado, folio, fecha, otros) VALUES  ('" + userData.universidad + "',  '" + userData.titulo + "',  " + userData.numerodiploma + ",  " + userData.actagrado + ",  " + userData.folio + ",  '" + userData.fecha + "',  '" + userData.otros + "') "
 
-loginModel.createUser = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.password, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
-  var query = 'insert into users (email, user, pass) values ("' + userData.email + '","' + userData.user + '","' + pass + '");';
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
-            respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error la consulta no arroja datos")
-          callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
-          })
-        }
-      }
-    })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
-}
-
-
-loginModel.updateUser = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.password, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
-  var query = "UPDATE users SET email = '" + userData.email + "' , user = '" + userData.user + "' , pass= '" + pass + "'  where id=" + userData.id + " ";
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
-            respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error")
-          callback(null, {
-            "respuesta": "Error al actualizar"
-          })
-        }
-      }
-    })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
-}
-
-
-loginModel.dataUser = function (userData, callback) {
-  var query = 'select * from users where id = ' + userData.id;
   if (connection) {
     connection.query(query, function (error, rows) {
       if (error) {
@@ -148,7 +69,7 @@ loginModel.dataUser = function (userData, callback) {
         } else {
           console.log("Error la consulta no arroja datos")
           callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
+            "respuesta": "Error los datos  profesionales no se pueden crear "
           })
         }
       }
@@ -159,6 +80,87 @@ loginModel.dataUser = function (userData, callback) {
       "Respuesta": "Error en Conexion"
     })
   }
+
 }
 
-module.exports = loginModel;
+
+// update users register
+registerModel.updateUsersRegister = function (userData, callback) {
+  console.log(userData)
+  var query = "UPDATE dates_professional SET universidad = '" + userData.universidad + "' , titulo= '" + userData.titulo + "' , numero_diploma= " + userData.numerodiploma + ", acta_grado= " + userData.actagrado + ", folio= " + userData.folio + ", fecha= '" + userData.fecha + "',   otros= '" + userData. otros + "'  where id='" + userData.id + "' "
+
+  if (connection) {
+    connection.query(query, function (error, rows) {
+      if (error) {
+        console.log(error)
+        callback(null, {
+          "respuesta": "Error de conexión"
+        })
+      } else {
+        if (rows.length != 0) {
+          var jsonObj = {
+            rows,
+            respuesta: "Success"
+          }
+          callback(null, jsonObj)
+        } else {
+          console.log("Error la consulta no arroja datos")
+          callback(null, {
+            "respuesta": "Error los datos  profesionales no se pueden actualizar "
+          })
+        }
+      }
+    })
+  } else {
+    console.log("No se conecto con servidor")
+    callback(null, {
+      "Respuesta": "Error en Conexion"
+    })
+  }
+
+}
+
+
+// delete users register
+registerModel.deleteUsersRegister = function (userData, callback) {
+  console.log(userData)
+  var query = "DELETE FROM dates_professional WHERE id='" + userData.id + "' "
+
+  if (connection) {
+    connection.query(query, function (error, rows) {
+      if (error) {
+        console.log(error)
+        callback(null, {
+          "respuesta": "Error de conexión"
+        })
+      } else {
+        if (rows.length != 0) {
+          var jsonObj = {
+            rows,
+            respuesta: "Success"
+          }
+          callback(null, jsonObj)
+        } else {
+          console.log("Error la consulta no arroja datos")
+          callback(null, {
+            "respuesta": "Error los datos  profesionales no se pueden eliminar "
+          })
+        }
+      }
+    })
+  } else {
+    console.log("No se conecto con servidor")
+    callback(null, {
+      "Respuesta": "Error en Conexion"
+    })
+  }
+
+}
+
+
+
+
+module.exports = registerModel;
+
+
+
