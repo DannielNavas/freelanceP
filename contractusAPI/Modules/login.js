@@ -48,11 +48,12 @@ loginModel.getUserLogin = function (userData, callback) {
 
 
 loginModel.createUser = function (userData, callback) {
-  let pass = Buffer.from(userData.pass).toString('base64');
+  let pass = Buffer.from(userData.password).toString('base64');
   let hash = crypto.createHmac('sha256',secret)
     .update(pass)
     .digest('hex');
   var query = 'insert into users (email, user, pass) values ("' + userData.email + '","' + userData.user + '","' + hash + '");';
+  console.log(query);
   if (connection) {
     connection.query(query, function (error, rows) {
       if (error) {
