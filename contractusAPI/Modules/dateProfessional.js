@@ -1,10 +1,4 @@
-
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "contractus"
-})
+var connection = require('./db/db')
 
 connection.connect();
 

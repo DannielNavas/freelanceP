@@ -1,27 +1,19 @@
-var mysql = require('mysql')
-var enigma = require('enigma-code')
-
-const valorEncriptación = 10
-let key = 'Odin2019C'
-
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "contractus"
-})
+const connection = require('./db/db')
+const crypto = require('crypto');
+const env = require('dotenv')
+env.config()
+const secret = process.env.PASS_CONTRACTUS
 
 connection.connect();
 
 var loginModel = {}
 
 loginModel.getUserLogin = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.pass, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
-  var query = "select id, email, pass from users where email = '" + userData.email + "' and pass = '" + pass + "'"
+  let pass = Buffer.from(userData.pass).toString('base64');
+  let hash = crypto.createHmac('sha256',secret)
+    .update(pass)
+    .digest('hex');
+  var query = "select id, email, pass from users where email = '" + userData.email + "' and pass = '" + hash + "'"
   if (connection) {
     connection.query(query, function (error, rows) {
       if (error) {
@@ -56,12 +48,11 @@ loginModel.getUserLogin = function (userData, callback) {
 
 
 loginModel.createUser = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.password, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
-  var query = 'insert into users (email, user, pass) values ("' + userData.email + '","' + userData.user + '","' + pass + '");';
+  let pass = Buffer.from(userData.pass).toString('base64');
+  let hash = crypto.createHmac('sha256',secret)
+    .update(pass)
+    .digest('hex');
+  var query = 'insert into users (email, user, pass) values ("' + userData.email + '","' + userData.user + '","' + hash + '");';
   if (connection) {
     connection.query(query, function (error, rows) {
       if (error) {
@@ -93,11 +84,10 @@ loginModel.createUser = function (userData, callback) {
 
 
 loginModel.updateUser = function (userData, callback) {
-  var pass;
-  enigma.genHash(valorEncriptación, key, userData.password, function (error, hash) {
-    if (error) return console.error(error)
-    pass = hash
-  })
+  let pass = Buffer.from(userData.pass).toString('base64');
+  let hash = crypto.createHmac('sha256',secret)
+    .update(pass)
+    .digest('hex');
   var query = "UPDATE users SET email = '" + userData.email + "' , user = '" + userData.user + "' , pass= '" + pass + "'  where id=" + userData.id + " ";
   if (connection) {
     connection.query(query, function (error, rows) {
