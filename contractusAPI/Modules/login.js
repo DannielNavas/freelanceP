@@ -1,155 +1,130 @@
 const connection = require('./db/db')
 const crypto = require('crypto');
+const cDB = require('./shema/shema')
+const db = require('./db/db');
+
+var jsORM = require('js-hibernate');
+var session = jsORM.session(db);
+
 const env = require('dotenv')
 env.config()
 const secret = process.env.PASS_CONTRACTUS
 
-connection.connect();
 
 var loginModel = {}
 
 loginModel.getUserLogin = function (userData, callback) {
-  let pass = Buffer.from(userData.pass).toString('base64');
-  let hash = crypto.createHmac('sha256',secret)
-    .update(pass)
-    .digest('hex');
-  var query = "select id, email, pass from users where email = '" + userData.email + "' and pass = '" + hash + "'"
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
-            rows,
+    let pass = Buffer.from(userData.pass).toString('base64');
+    let hash = crypto.createHmac('sha256', secret)
+        .update(pass)
+        .digest('hex');
+    console.log(hash);
+    var query = session.query(cDB)
+        .where(
+            cDB.email.Equal(userData.email)
+            .And()
+            .pass.Equal(hash)
+        )
+    query.then(function (result) {
+        console.log('ok')
+        var jsonObj = {
+            id: result[0].id,
+            user: result[0].user,
+            email: result[0].email,
+            pass: result[0].pass,
             respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error la consulta no arroja datos")
-          callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
-          })
         }
-      }
+        callback(null, jsonObj)
+    }).catch(function (error) {
+        console.log('Fail');
+        console.log(error);
+        callback(null, {
+            "respuesta": "Usuario y/o contraseña no son validos"
+        })
+        // console.log('Error: '+ error)
     })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
-
 }
 
 
 
 loginModel.createUser = function (userData, callback) {
-  let pass = Buffer.from(userData.password).toString('base64');
-  let hash = crypto.createHmac('sha256',secret)
-    .update(pass)
-    .digest('hex');
-  var query = 'insert into users (email, user, pass) values ("' + userData.email + '","' + userData.user + '","' + hash + '");';
-  console.log(query);
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
+    let pass = Buffer.from(userData.password).toString('base64');
+    let hash = crypto.createHmac('sha256', secret)
+        .update(pass)
+        .digest('hex');
+
+    var data = {
+        user: userData.user,
+        email: userData.email,
+        pass: hash
+    }
+    
+    cDB.Insert(data).then(function (result) {
+        console.log('inserted: ' + result.affectedRows);
+        var jsonObj = {
             respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error la consulta no arroja datos")
-          callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
-          })
         }
-      }
-    })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
+        console.log(data);
+        console.log(result);
+        callback(null, jsonObj)
+    }).catch(function (error) {
+        console.log('Error: ' + error);
+        console.log(result);
+        callback(null, {
+            "respuesta": "Error al registrar el usuario"
+        })
+    });
 }
 
 
 loginModel.updateUser = function (userData, callback) {
-  let pass = Buffer.from(userData.pass).toString('base64');
-  let hash = crypto.createHmac('sha256',secret)
-    .update(pass)
-    .digest('hex');
-  var query = "UPDATE users SET email = '" + userData.email + "' , user = '" + userData.user + "' , pass= '" + pass + "'  where id=" + userData.id + " ";
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
+    let pass = Buffer.from(userData.pass).toString('base64');
+    let hash = crypto.createHmac('sha256', secret)
+        .update(pass)
+        .digest('hex');
+    let sql = "UPDATE users SET email = '" + userData.email + "' , user = '" + userData.user + "' , pass= '" + hash + "'  where id=" + userData.id + " ";
+    let query = session.executeSql(sql);
+    query.then(function(result) {
+        var jsonObj = {
             respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error")
-          callback(null, {
-            "respuesta": "Error al actualizar"
-          })
         }
-      }
-    })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
+        callback(null, jsonObj)
+        console.log(result); // array with result
+    }).catch(function(error) {
+        console.log('Error: ' + error);
+        callback(null, {
+            "respuesta": "Error al actualizar"
+        })
+    });
 }
 
 
 loginModel.dataUser = function (userData, callback) {
-  var query = 'select * from users where id = ' + userData.id;
-  if (connection) {
-    connection.query(query, function (error, rows) {
-      if (error) {
-        console.log(error)
-        callback(null, {
-          "respuesta": "Error de conexión"
-        })
-      } else {
-        if (rows.length != 0) {
-          var jsonObj = {
-            rows,
+    console.log(userData.id)
+    var query = session.query(cDB)
+        .where(
+            cDB.id.Equal(userData.id)
+        )
+    query.then(function (result) {
+        console.log('ok')
+        var jsonObj = {
+            id: result[0].id,
+            user: result[0].user,
+            email: result[0].email,
+            pass: result[0].pass,
             respuesta: "Success"
-          }
-          callback(null, jsonObj)
-        } else {
-          console.log("Error la consulta no arroja datos")
-          callback(null, {
-            "respuesta": "Usuario y/o contraseña no son validos"
-          })
         }
-      }
+        callback(null, jsonObj)
+    }).catch(function (error) {
+        console.log('Fail');
+        console.log(error);
+        callback(null, {
+            "respuesta": "No se puede tener acceso a datos."
+        })
+        // console.log('Error: '+ error)
     })
-  } else {
-    console.log("No se conecto con servidor")
-    callback(null, {
-      "Respuesta": "Error en Conexion"
-    })
-  }
+
+
 }
 
 module.exports = loginModel;

@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
       if (this.datos.respuesta === 'Success') {
         localStorage.setItem('primerInicio', 'true');
         this.router.navigate(['/login']);
-      } else if (this.datos.respuesta === 'Usuario y/o contraseña no son validos') {
+      } else if (this.datos.respuesta === 'Error al registrar el usuario') {
         this.resp = true;
       }
     });

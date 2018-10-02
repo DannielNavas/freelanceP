@@ -24,12 +24,13 @@ export class LoginComponent implements OnInit {
     this.loginArray.push(this.selectedLogin);
     console.log(this.loginArray);
     this.loginService.login(this.loginArray).subscribe(data => {
+      console.log(data)
       this.datos = data;
       if (this.datos.respuesta === 'Success') {
         localStorage.setItem('login', 'true');
         const primerInicio = localStorage.getItem('primerInicio');
         if (primerInicio === 'true') {
-          localStorage.setItem('userIdC', this.datos.rows[0].id);
+          localStorage.setItem('userIdC', this.datos.id);
           this.router.navigate(['/perfil']);
         } else {
           this.router.navigate(['/portal']);

@@ -12,6 +12,7 @@
     "enigma-code": "0.0.11",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "js-hibernate": "^1.0.14",
     "morgan": "~1.9.0",
     "mysql": "^2.16.0",
     "pug": "2.0.0-beta11"
