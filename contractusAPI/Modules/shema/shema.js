@@ -4,9 +4,9 @@ const jsORM = require('js-hibernate')
 const session = jsORM.session(db);
 
 var userMap = session.tableMap('users')
-    .columnMap('id', 'id', { isAutoIncrement: true })
+    .columnMap('idusers', 'idusers', { isAutoIncrement: true })
     .columnMap('user', 'user')
     .columnMap('email', 'email')
-    .columnMap('pass','pass')
+    .columnMap('pasword','pasword')
 
 module.exports = userMap;

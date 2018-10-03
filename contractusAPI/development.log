@@ -1,0 +1,21 @@
+
+info [Tue Oct 02 2018 22:20:30 GMT-0500 (-05)]  login realizado [ RowDataPacket {
+    idusers: 4,
+    user: 'danniel',
+    email: 'dannielnavas@pm.me',
+    pasword: '28e84dd08e831e00635c3806b6828310d79d692d0f356fe52a0c8b0eccf38876' } ] now!
+
+
+info [Tue Oct 02 2018 22:34:38 GMT-0500 (-05)]  login realizado [ RowDataPacket {
+    idusers: 4,
+    user: 'danniel',
+    email: 'dannielnavas@pm.me',
+    pasword: '28e84dd08e831e00635c3806b6828310d79d692d0f356fe52a0c8b0eccf38876' } ] now!
+info [Tue Oct 02 2018 22:34:39 GMT-0500 (-05)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 4,
+    user: 'danniel',
+    email: 'dannielnavas@pm.me',
+    pasword: '28e84dd08e831e00635c3806b6828310d79d692d0f356fe52a0c8b0eccf38876' } ] now!
+info [Tue Oct 02 2018 22:35:35 GMT-0500 (-05)]  Usuario creado { user: 'darker',
+  email: 'dannielnavas@gmail.com',
+  pasword: '28e84dd08e831e00635c3806b6828310d79d692d0f356fe52a0c8b0eccf38876' } now!
