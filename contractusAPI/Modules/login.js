@@ -32,7 +32,7 @@ loginModel.getUserLogin = function (userData, callback) {
         )
     query.then(function (result) {
         console.log('ok')
-        logger.info('login realizado', result, 'now!');
+        logger.warn('login realizado', result, 'now!');
         var jsonObj = {
             id: result[0].idusers,
             user: result[0].user,

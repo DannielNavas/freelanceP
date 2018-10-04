@@ -1,32 +1,32 @@
 <div class="container">
-  <div class="row">
-    <div class="col s12 m 12 l12">
-      <h2>Datos basicos</h2>
+    <div class="row">
+        <div class="col s12 m 12 l12">
+            <h2>Datos de usuario</h2>
+        </div>
+        <div class="col s12 m12 l12">
+            <form>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="user" type="text" class="validate valid" value="{{datos.user}}">
+                    <label for="user" class="active">Nombre de usuario</label>
+                </div>
+                <!--<div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="nameuser" type="text" class="validate valid" value="Luis Daniel Gordo Navas">
+                    <label for="nameuser" class="active">Nombre</label>
+                </div>-->
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="mail" type="email" class="validate valid" value="{{datos.email}}">
+                    <label for="mail" class="active">Correo</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">security</i>
+                    <input id="password" type="password" class="validate valid" value="{{datos.pasword}}" disabled>
+                    <label for="password" class="active">Contraseña</label>
+                </div>
+                <a class="btn waves-effect waves-light blue right">Guardar</a>
+            </form>
+        </div>
     </div>
-    <div class="col s12 m12 l12">
-      <form>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="user" type="text" class="validate valid" value="{{datos.user}}">
-          <label for="user" class="active">Nombre de usuario</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="nameuser" type="text" class="validate valid" value="Luis Daniel Gordo Navas">
-          <label for="nameuser" class="active">Nombre</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">email</i>
-          <input id="mail" type="email" class="validate valid" value="{{datos.email}}">
-          <label for="mail" class="active">Correo</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">security</i>
-          <input id="password" type="password" class="validate valid" value="{{datos.pasword}}" disabled>
-          <label for="password" class="active">Contraseña</label>
-        </div>
-         <a class="btn waves-effect waves-light blue right">Guardar</a>
-      </form>
-    </div>
-  </div>
 </div>
