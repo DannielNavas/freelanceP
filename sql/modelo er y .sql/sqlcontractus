@@ -1,0 +1,195 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`users` (
+  `idusers` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `user` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `documento` INT NOT NULL,
+  PRIMARY KEY (`documento`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tipoPerfil`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tipoPerfil` (
+  `idtipoPerfil` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `tipoPerfil` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idtipoPerfil`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`perfil`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`perfil` (
+  `idperfil` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `titulo` VARCHAR(100) NOT NULL,
+  `portafolio` VARCHAR(100) NOT NULL,
+  `tokenCliente` VARCHAR(200) NOT NULL,
+  `tipoPerfil_idtipoPerfil` BIGINT(22) NOT NULL,
+  `users_documento` INT NOT NULL,
+  PRIMARY KEY (`idperfil`, `tipoPerfil_idtipoPerfil`, `users_documento`),
+  INDEX `fk_perfil_tipoPerfil1_idx` (`tipoPerfil_idtipoPerfil` ASC),
+  INDEX `fk_perfil_users1_idx` (`users_documento` ASC),
+  CONSTRAINT `fk_perfil_tipoPerfil1`
+    FOREIGN KEY (`tipoPerfil_idtipoPerfil`)
+    REFERENCES `mydb`.`tipoPerfil` (`idtipoPerfil`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_perfil_users1`
+    FOREIGN KEY (`users_documento`)
+    REFERENCES `mydb`.`users` (`documento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`conocimientos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`conocimientos` (
+  `idconocimientos` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `conocimientos` LONGTEXT NOT NULL,
+  `valoracion` INT NOT NULL,
+  `users_documento` INT NOT NULL,
+  PRIMARY KEY (`idconocimientos`, `users_documento`),
+  INDEX `fk_conocimientos_users1_idx` (`users_documento` ASC),
+  CONSTRAINT `fk_conocimientos_users1`
+    FOREIGN KEY (`users_documento`)
+    REFERENCES `mydb`.`users` (`documento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`experienciaPersonal`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`experienciaPersonal` (
+  `idexperienciaPersonal` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `fechaInicio` DATE NOT NULL,
+  `fechaFinal` DATE NOT NULL,
+  `lugarExperiencia` VARCHAR(100) NOT NULL,
+  `funciones` LONGTEXT NOT NULL,
+  `users_documento` INT NOT NULL,
+  PRIMARY KEY (`idexperienciaPersonal`, `users_documento`),
+  INDEX `fk_experienciaPersonal_users1_idx` (`users_documento` ASC),
+  CONSTRAINT `fk_experienciaPersonal_users1`
+    FOREIGN KEY (`users_documento`)
+    REFERENCES `mydb`.`users` (`documento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tipoProyecto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tipoProyecto` (
+  `idtipoProyecto` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `tipoProyecto` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idtipoProyecto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`experienciaContractus`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`experienciaContractus` (
+  `idexperienciaContractus` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `fechaInicio` DATE NOT NULL,
+  `fechaFinal` DATE NOT NULL,
+  `cliente` VARCHAR(200) NOT NULL,
+  `tipoProyecto_idtipoProyecto` BIGINT(22) NOT NULL,
+  PRIMARY KEY (`idexperienciaContractus`, `tipoProyecto_idtipoProyecto`),
+  INDEX `fk_experienciaContractus_tipoProyecto1_idx` (`tipoProyecto_idtipoProyecto` ASC),
+  CONSTRAINT `fk_experienciaContractus_tipoProyecto1`
+    FOREIGN KEY (`tipoProyecto_idtipoProyecto`)
+    REFERENCES `mydb`.`tipoProyecto` (`idtipoProyecto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`proyecto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`proyecto` (
+  `idproyecto` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
+  `presupuesto` VARCHAR(100) NOT NULL,
+  `tipoProyecto_idtipoProyecto` BIGINT(22) NOT NULL,
+  PRIMARY KEY (`idproyecto`, `tipoProyecto_idtipoProyecto`),
+  INDEX `fk_proyecto_tipoProyecto1_idx` (`tipoProyecto_idtipoProyecto` ASC),
+  CONSTRAINT `fk_proyecto_tipoProyecto1`
+    FOREIGN KEY (`tipoProyecto_idtipoProyecto`)
+    REFERENCES `mydb`.`tipoProyecto` (`idtipoProyecto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`participantesProyecto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`participantesProyecto` (
+  `idparticipantesProyecto` BIGINT(22) NOT NULL,
+  `proyecto_idproyecto` BIGINT(22) NOT NULL,
+  `users_documento` INT NOT NULL,
+  PRIMARY KEY (`idparticipantesProyecto`, `proyecto_idproyecto`, `users_documento`),
+  INDEX `fk_participantesProyecto_proyecto1_idx` (`proyecto_idproyecto` ASC),
+  INDEX `fk_participantesProyecto_users1_idx` (`users_documento` ASC),
+  CONSTRAINT `fk_participantesProyecto_proyecto1`
+    FOREIGN KEY (`proyecto_idproyecto`)
+    REFERENCES `mydb`.`proyecto` (`idproyecto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_participantesProyecto_users1`
+    FOREIGN KEY (`users_documento`)
+    REFERENCES `mydb`.`users` (`documento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`contratos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`contratos` (
+  `idcontratos` BIGINT(22) NOT NULL AUTO_INCREMENT,
+  `tokenCliente` VARCHAR(200) NOT NULL,
+  `users_documento` INT NOT NULL,
+  PRIMARY KEY (`idcontratos`, `users_documento`),
+  INDEX `fk_contratos_users1_idx` (`users_documento` ASC),
+  CONSTRAINT `fk_contratos_users1`
+    FOREIGN KEY (`users_documento`)
+    REFERENCES `mydb`.`users` (`documento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
