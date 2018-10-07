@@ -1,6 +1,6 @@
 const connection = require('./db/db')
 const crypto = require('crypto');
-const cDB = require('./shema/login')
+const cDB = require('./shema/experienciaPersonal')
 const db = require('./db/db');
 const jsORM = require('js-hibernate');
 const session = jsORM.session(db);
@@ -8,23 +8,25 @@ const env = require('dotenv')
 env.config()
 const secret = process.env.PASS_CONTRACTUS
 
+
 connection.connect();
 
-var registerModel = {}
+var experienciaPersonalModel = {}
 
-// get all users register
-registerModel.getUserRegister = function (userData, callback) {
+// get all experence personal
+experienciaPersonalModel.getExperienciaPersonal = function (userData, callback) {
     console.log(userData)
     var query = session.query(cDB)
 
     query.then(function (result) {
         console.log('ok')
         var jsonObj = {
-            id: result[0].idusers,
-            user: result[0].user,
-            email: result[0].email,
-            pasword: result[0].pasword,
-            document: result[0].documento,
+            id: result[0].idexperienciaPersonal,
+            fechaInicio: result[0].fechaInicio,
+            fechaFinal: result[0].fechaFinal,
+            lugarExperiencia: result[0].lugarExperiencia,
+            funciones: result[0].funciones,
+            users_documento: result[0].users_documento,
             respuesta: "Success"
         }
         logger.info('Se obtiene los datos', result, 'now!');
@@ -38,21 +40,22 @@ registerModel.getUserRegister = function (userData, callback) {
         })
     })
 }
-// get one user register
-registerModel.getUserOneRegister = function (userData, callback) {
+// get one experence personal
+experienciaPersonalModel.getOneExperienciaPersonal = function (userData, callback) {
     console.log(userData)
     var query = session.query(cDB).where(
-            cDB.idusers.Equal(userData.idusers)
+            cDB.idexperienciaPersonal.Equal(userData.idexperienciaPersonal)
         )
 
     query.then(function (result) {
         console.log('ok')
         var jsonObj = {
-            id: result[0].idusers,
-            user: result[0].user,
-            email: result[0].email,
-            pasword: result[0].pasword,
-            document: result[0].documento,
+            id: result[0].idexperienciaPersonal,
+            fechaInicio: result[0].fechaInicio,
+            fechaFinal: result[0].fechaFinal,
+            lugarExperiencia: result[0].lugarExperiencia,
+            funciones: result[0].funciones,
+            users_documento: result[0].users_documento,
             respuesta: "Success"
         }
         logger.info('Se obtiene los datos', result, 'now!');
@@ -66,22 +69,19 @@ registerModel.getUserOneRegister = function (userData, callback) {
         })
     })
 }
-// create users register
-registerModel.createUsersRegister = function (userData, callback) {
-    let pass = Buffer.from(userData.password).toString('base64');
-    let hash = crypto.createHmac('sha256', secret)
-        .update(pass)
-        .digest('hex');
+// create experence personal
+experienciaPersonalModel.createExperienciaPersonal = function (userData, callback) {
 
     let data = {
-        user: userData.user,
-        email: userData.email,
-        pasword: hash,
-        document: userData.documento
+        fechaInicio: userData.fechaInicio,
+        fechaFinal: userData.fechaFinal,
+        lugarExperiencia: userData.lugarExperiencia,
+        funciones: userData.funciones,
+        users_documento: userData.users_documento
     }
     
     cDB.Insert(data).then(function (result) {
-        logger.info('Usuario creado', result.affectedRows, 'now!');
+        logger.info('Experiencia Creada', result.affectedRows, 'now!');
         var jsonObj = {
             respuesta: "Success"
         }
@@ -90,20 +90,17 @@ registerModel.createUsersRegister = function (userData, callback) {
         callback(null, jsonObj)
     }).catch(function (error) {
         console.log('Error: ' + error);
-        logger.error('Error al crear usuario', error, 'fail')
+        logger.error('Error al crear la experiencia', error, 'fail')
         console.log(result);
         callback(null, {
             "respuesta": "Error al registrar"
         })
     });
 }
-//update user register
-registerModel.updateUsersRegister = function (userData, callback) {
-    let pass = Buffer.from(userData.pass).toString('base64');
-    let hash = crypto.createHmac('sha256', secret)
-        .update(pass)
-        .digest('hex');
-    let sql = "UPDATE users SET email = '" + userData.email + "' , user = '" + userData.user + "' , pasword= '" + hash + "' ,  documento= '" + userData.documento + "'  where idusers=" + userData.id + " ";
+// update experence personal
+experienciaPersonalModel.updateExperienciaPersonal = function (userData, callback) {
+
+    let sql = "UPDATE experienciaPersonal SET fechaInicio  = '" + userData.fechaInicio   + "' , fechaFinal = '" + userData.fechaFinal + "' , lugarExperiencia= '" + userData.lugarExperiencia + "' ,  funciones= '" + userData.funciones + "' ,  users_documento= '" + userData.users_documento + "'  where idexperienciaPersonal=" + userData.id + " ";
     let query = session.executeSql(sql);
     query.then(function(result) {
         var jsonObj = {
@@ -118,13 +115,10 @@ registerModel.updateUsersRegister = function (userData, callback) {
         })
     });
 }
-// delete users register
-registerModel.deleteUsersRegister = function (userData, callback) {
-    let pass = Buffer.from(userData.pass).toString('base64');
-    let hash = crypto.createHmac('sha256', secret)
-        .update(pass)
-        .digest('hex');
-    let sql = "DELETE FROM users WHERE idusers='" + userData.id + "' ";
+// delete experence personal
+experienciaPersonalModel.deleteExperienciaPersonal = function (userData, callback) {
+  
+    let sql = "DELETE FROM experienciaPersonal WHERE idexperienciaPersonal='" + userData.id + "' ";
     let query = session.executeSql(sql);
     query.then(function(result) {
         var jsonObj = {
@@ -141,9 +135,7 @@ registerModel.deleteUsersRegister = function (userData, callback) {
 }
 
 
-
-
-module.exports = registerModel;
+module.exports = experienciaPersonalModel;
 
 
 
