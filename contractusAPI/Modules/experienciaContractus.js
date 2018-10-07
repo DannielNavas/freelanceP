@@ -11,10 +11,10 @@ const secret = process.env.PASS_CONTRACTUS
 
 connection.connect();
 
-var experienciaContractuslModel = {}
+var experienciaContractusModel = {}
 
 // get all experence contract
-experienciaContractuslModel.getExperienciaContractus = function (userData, callback) {
+experienciaContractusModel.getExperienciaContractus = function (userData, callback) {
     console.log(userData)
     var query = session.query(cDB)
 
@@ -40,7 +40,7 @@ experienciaContractuslModel.getExperienciaContractus = function (userData, callb
     })
 }
 // get one experence contract
-experienciaContractuslModel.getOneExperienciaContractus = function (userData, callback) {
+experienciaContractusModel.getOneExperienciaContractus = function (userData, callback) {
     console.log(userData)
     var query = session.query(cDB).where(
             cDB.idexperienciaContractus.Equal(userData.idexperienciaContractus)
@@ -68,7 +68,7 @@ experienciaContractuslModel.getOneExperienciaContractus = function (userData, ca
     })
 }
 // create experence contract
-experienciaContractuslModel.createExperienciaContractus = function (userData, callback) {
+experienciaContractusModel.createExperienciaContractus = function (userData, callback) {
 
     let data = {
         fechaInicio: userData.fechaInicio,
@@ -95,7 +95,7 @@ experienciaContractuslModel.createExperienciaContractus = function (userData, ca
     });
 }
 // update experence contract
-experienciaContractuslModel.updateExperienciaContractus = function (userData, callback) {
+experienciaContractusModel.updateExperienciaContractus = function (userData, callback) {
 
     let sql = "UPDATE experienciaContractus SET fechaInicio  = '" + userData.fechaInicio   + "' , fechaFinal = '" + userData.fechaFinal + "' , cliente= '" + userData.cliente + "' ,  tipoProyecto_idtipoProyecto= '" + userData.tipoProyecto_idtipoProyecto + "'  where idexperienciaContractus=" + userData.id + " ";
     let query = session.executeSql(sql);
@@ -113,7 +113,7 @@ experienciaContractuslModel.updateExperienciaContractus = function (userData, ca
     });
 }
 // delete experence contract
-experienciaContractuslModel.deleteExperienciaContractus = function (userData, callback) {
+experienciaContractusModel.deleteExperienciaContractus = function (userData, callback) {
   
     let sql = "DELETE FROM experienciaContractus WHERE idexperienciaContractus='" + userData.id + "' ";
     let query = session.executeSql(sql);
@@ -132,7 +132,7 @@ experienciaContractuslModel.deleteExperienciaContractus = function (userData, ca
 }
 
 
-module.exports = experienciaContractuslModel;
+module.exports = experienciaContractusModel;
 
 
 
