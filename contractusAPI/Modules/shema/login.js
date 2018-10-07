@@ -8,5 +8,6 @@ var userMap = session.tableMap('users')
     .columnMap('user', 'user')
     .columnMap('email', 'email')
     .columnMap('pasword','pasword')
+    .columnMap('documento','documento')
 
 module.exports = userMap;

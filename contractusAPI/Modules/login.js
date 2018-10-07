@@ -1,6 +1,6 @@
 const connection = require('./db/db')
 const crypto = require('crypto');
-const cDB = require('./shema/shema')
+const cDB = require('./shema/login')
 const db = require('./db/db');
 const jsORM = require('js-hibernate');
 const session = jsORM.session(db);
