@@ -1,15 +1,9 @@
 .nav-free {
-  background-color: #3F51B5;
+  background-color: #4ECDC4;
 }
 
 .parallax-container {
-  height: 300px;
-}
-
-.parallax-contractus img {
-  transform: skewY(10deg);
-  background-size: cover;
-  transform-origin: 0;
+  height: 340px;
 }
 
 .contractus-banner {
@@ -19,6 +13,11 @@
 
 .contractus-font {
   font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 3px black; 
+}
+
+.contractus-text-shadow{
+  text-shadow: 1px 1px 3px black; 
 }
 
 .contractus-mt1 {
@@ -35,4 +34,8 @@
   border-radius: 30px;
   color: white;
   border: 3px solid white;
+}
+
+.contractus-footer{
+  background-color: #F9F9F9 !important;
 }

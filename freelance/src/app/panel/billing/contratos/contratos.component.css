@@ -1,5 +1,5 @@
 .nav-free {
-  background-color: #3F51B5;
+  background-color: #4ECDC4;
 }
 
 .parallax-container {
@@ -43,10 +43,6 @@ header,
 main,
 footer {
   padding-left: 300px;
-}
-
-.nav-free {
-  background-color: #3F51B5;
 }
 
 .parallax-container {

@@ -9,14 +9,17 @@ export class RegisterProjectComponent implements OnInit {
   selectedProject = '0';
   button = false;
   contador = 0;
+  scope;
   constructor() { }
 
 
   selectedTypeProject() {
     if (!this.button) {
       this.button = true;
+      // document.getElementById('frontend').className = "contractus-color";
     } else if (this.button) {
       this.button = false;
+      // document.getElementById('frontend').className = "contractus-color-off";
     }
   }
 

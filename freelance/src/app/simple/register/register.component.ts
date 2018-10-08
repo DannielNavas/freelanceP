@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.datos);
       if (this.datos.respuesta === 'Success') {
         localStorage.setItem('primerInicio', 'true');
-        this.router.navigate(['/login']);
+        this.router.navigate(['/new']);
       } else if (this.datos.respuesta === 'Error al registrar el usuario') {
         this.resp = true;
       }

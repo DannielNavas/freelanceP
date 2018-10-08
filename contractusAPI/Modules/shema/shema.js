@@ -7,6 +7,6 @@ var userMap = session.tableMap('users')
     .columnMap('idusers', 'idusers', { isAutoIncrement: true })
     .columnMap('user', 'user')
     .columnMap('email', 'email')
-    .columnMap('pasword','pasword')
+    .columnMap('pasword', 'pasword')
 
 module.exports = userMap;

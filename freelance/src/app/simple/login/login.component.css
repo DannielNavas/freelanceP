@@ -21,6 +21,10 @@
   width: 80%;
 }
 
+.btn-contractus{
+  background-color: #4ECDC4;
+}
+
 .btn-facebook {
   background-color: #3b5998 !important;
   border-radius: 30px;
@@ -48,4 +52,9 @@ h2 {
 
 .row-footer {
   margin-bottom: 0;
+}
+
+input[type="text"]:not(broser-default):focus:not([readonly]){
+  border-bottom: 1px solid #4ECDC4;
+  box-shadow: 0 1px 0 0 #4ECDC4 !important;
 }

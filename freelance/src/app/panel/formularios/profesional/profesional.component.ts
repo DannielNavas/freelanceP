@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -8,7 +9,13 @@ declare var $: any;
 })
 export class ProfesionalComponent implements OnInit {
 
-    constructor() { }
+    constructor(private router: Router) { }
+
+    salir() {
+    localStorage.removeItem('login');
+    localStorage.removeItem('userIdC');
+    this.router.navigate(['/']);
+    }
 
     ngOnInit() {
         $(document).ready(function () {

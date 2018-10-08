@@ -22,7 +22,7 @@
 }
 
 .ok {
-  color: #303F9F;
+  color: #4ECDC4;
 }
 
 .contractus-banner {
@@ -30,7 +30,7 @@
   padding: 0;
   height: 9vh;
   width: 103%;
-  background-color: #303F9F;
+  background-color: #4ECDC4;
   position: relative;
   top: -1.6em;
   border-top-left-radius: 10px;
@@ -39,7 +39,7 @@
 }
 
 .btn {
-  background-color: #303F9F;
+  background-color: #4ECDC4;
   border-radius: 30px;
   width: 50%;
 }
