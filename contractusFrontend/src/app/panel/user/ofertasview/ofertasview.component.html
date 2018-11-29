@@ -1,0 +1,131 @@
+<header>
+    <nav class="nav-free">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Contractus</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a routerLink="/portal">Inicio</a>
+                </li>
+                <li>
+                    <a routerLink="/perfil">Usuario</a>
+                </li>
+                <li>
+                    <a (click)="salir()">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="nav-mobile" class="sidenav sidenav-fixed">
+        <li class="center">
+            <h3>
+                Titulo de la oferta
+            </h3>
+        </li>
+        <li class="center">
+            <img src="/assets/img/banner.jpg" alt="Foto del publicante" class="resposive-img circle" style="height: 100px; width: 100px;">
+        </li>
+        <li>
+            <div class="row row-contractus">
+                <div class="col s4">
+                    <p>
+                        <b>Publicante: </b>
+                    </p>
+                </div>
+                <div class="col s8">
+                    <p>Nombre del publicante</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row row-contractus">
+                <div class="col s4">
+                    <p>
+                        <b>Presupuesto: </b>
+                    </p>
+                </div>
+                <div class="col s8">
+                    <p>$1.000.000 - $2.000.000</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row row-contractus">
+                <div class="col s4">
+                    <p>
+                        <b>Tipo: </b>
+                    </p>
+                </div>
+                <div class="col s8">
+                    <p>Desarrollo frontend</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row row-contractus">
+                <div class="col s4">
+                    <p>
+                        <b>Contrato: </b>
+                    </p>
+                </div>
+                <div class="col s8">
+                    <p>Freelance</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row row-contractus">
+                <div class="col s4">
+                    <p>
+                        <b>Entrega: </b>
+                    </p>
+                </div>
+                <div class="col s8">
+                    <p>01-Marzo-2019</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col s12 center">
+                    <button class="btn btn-large nav-free" (click)="registrarOferta()">Postularme</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+</header>
+
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <h4>Resumen propuesta: </h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores doloremque fugit, voluptatibus inventore atque eveniet velit quam suscipit rerum! Dignissimos beatae explicabo aliquam incidunt impedit cum expedita deserunt perspiciatis
+                            repellendus.
+                        </p>
+                    </div>
+                    <div class="col s12 m12">
+                        <h4>Requisitos necesarios postulante: </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis exercitationem animi aspernatur ab alias eum, dignissimos dolor obcaecati sunt soluta iusto perspiciatis. Placeat, quia temporibus iusto ipsa quibusdam omnis
+                            magni?
+                        </p>
+                    </div>
+                    <div class="col s12 m12">
+                        <h4>Requisitos opcionales: </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis exercitationem animi aspernatur ab alias eum, dignissimos dolor obcaecati sunt soluta iusto perspiciatis. Placeat, quia temporibus iusto ipsa quibusdam omnis
+                            magni?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,160 @@
+<div *ngIf="login === 'true'">
+    <nav class="white">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo black-text">Contractus</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a routerLink="/portal" class="black-text">Inicio</a>
+                </li>
+                <li>
+                    <a routerLink="/perfil" class="black-text">Usuario</a>
+                </li>
+                <li>
+                    <a (click)="salir()" class="black-text">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a routerLink="/portal">Inicio</a>
+        </li>
+        <li>
+            <a routerLink="/perfil">Usuario</a>
+        </li>
+        <li>
+            <a (click)="salir()">Salir</a>
+        </li>
+    </ul>
+    <div class="parallax-container">
+        <div class="parallax parallax-contractus">
+            <img class="contractus-img" src="https://images.unsplash.com/photo-1483706571191-85c0c76b1947?ixlib=rb-0.3.5&s=be0363575e4ae134c0eb24f6a846309a&auto=format&fit=crop&w=1500&q=80">
+        </div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col s12 m12 l12 center">
+                    <h1 class="white-text contractus-font">Contractus</h1>
+                    <h5 class="white-text contractus-text-shadow">Encuentra los mejores proyectos</h5>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l8 contractus-mt1 offset-l2 center">
+                        <button class="btn nav-free">Nueva consulta</button>
+                        <nav class="nav-free hide">
+                            <div class="nav-wrapper">
+                                <form (submit)="buscar()">
+                                    <div class="input-field">
+                                        <input id="search" type="search" required>
+                                        <label class="label-icon" for="search">
+                                          <i class="material-icons">search</i>
+                                      </label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section white">
+        <div class="row container-fluid">
+            <div class="col s12 m12 l4">
+                <div class="row">
+                    <div class="col s12 center">
+                        <img src="/assets/img/banner.jpg" alt="imagen usuario" class="resposive-img circle" style="height: 100px; width: 100px">
+                    </div>
+                    <div class="col s12 center">
+                        <h4>Bienvenido: Luis Daniel Gordo Navas</h4>
+                    </div>
+                    <div class="col s12">
+                        <h5>Ultimas Consultas</h5>
+                        <div class="collection">
+                            <a routerLink="" class="collection-item">Items</a>
+                            <a routerLink="" class="collection-item">Items</a>
+                            <a routerLink="" class="collection-item">Items</a>
+                            <a routerLink="" class="collection-item">Items</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l8">
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+                <div class="card white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Titulo de la oferta</span>
+                        <p>Descripción de la oferta texto temporal o completa.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver detalles</a>
+                        <!--<a href="#">This is a link</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer contractus-footer">
+        <div class="footer-copyright">
+            <div class="container black-text">
+                © 2018 Copyright Contractus
+            </div>
+        </div>
+    </footer>
+</div>
+<div *ngIf="login !== 'true'">
+    <div class="card-panel center">
+        <h4>Crea una cuenta para poder acceder</h4>
+    </div>
+</div>

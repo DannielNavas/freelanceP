@@ -1,0 +1,82 @@
+<div class="contractus" *ngIf="selectedProject === '0'">
+    <div class="container-fluid">
+        <div class="col s1">
+            <i class="material-icons white-text">arrow_back</i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h2 class="contractus-font">
+                    Contractus
+                </h2>
+            </div>
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card-panel  z-depth-5">
+                            <div class="row">
+                                <div class="contractus-banner">
+                                    <div class="col s12 center-align">
+                                        <h3 class="white-text">Seleccione el tipo de proyecto</h3>
+                                    </div>
+                                </div>
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s3">
+                                            <p>
+                                                <label>
+                          <input type="checkbox" (change)="selectedTypeProject()" />
+                          <span class="center">
+                            <i class="material-icons large center">settings</i>
+                            <p>Desarrollo backend</p>
+                          </span>
+                        </label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s3">
+                                            <p>
+                                                <label>
+                          <input type="checkbox" (change)="selectedTypeProject()" />
+                          <span class="center" id="frontend">
+                            <i class="material-icons large center" id="frontend">desktop_mac</i>
+                            <p>Desarrollo frontend</p>
+                          </span>
+                        </label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s3">
+                                            <p>
+                                                <label>
+                          <input type="checkbox" (change)="selectedTypeProject()" />
+                          <span class="center">
+                            <i class="material-icons large center">phonelink_setup</i>
+                            <p>Desarrollo movil</p>
+                          </span>
+                        </label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s3">
+                                            <p>
+                                                <label>
+                          <input type="checkbox" (change)="selectedTypeProject()" />
+                          <span class="center">
+                            <i class="material-icons large center">layers</i>
+                            <p>Diseño</p>
+                          </span>
+                        </label>
+                                            </p>
+                                        </div>
+                                        <div class="s12 center" *ngIf="button">
+                                            <a routerLink="/register" class="btn waves-effect waves-light color-free btn-large">Continuar</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
