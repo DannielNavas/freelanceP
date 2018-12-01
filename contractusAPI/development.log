@@ -185,3 +185,111 @@ info [Wed Oct 03 2018 20:58:22 GMT-0500 (-05)]  Se obtiene los datos [ RowDataPa
 
 
 
+
+
+info [Fri Nov 30 2018 21:26:40 GMT-0500 (Colombia Standard Time)]  Usuario creado 1 now!
+warn [Fri Nov 30 2018 21:33:01 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Fri Nov 30 2018 21:33:01 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Fri Nov 30 2018 21:50:12 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+error [Fri Nov 30 2018 21:50:13 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:50:32 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:55:17 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:55:57 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:56:06 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:56:29 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Fri Nov 30 2018 21:56:49 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+info [Fri Nov 30 2018 21:58:04 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Fri Nov 30 2018 21:58:37 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Fri Nov 30 2018 22:00:38 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Fri Nov 30 2018 22:01:26 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Fri Nov 30 2018 22:03:09 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!

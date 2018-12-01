@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 /*Service*/
 import { LoginService } from './service/login.service';
@@ -56,7 +57,8 @@ import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.compon
   providers: [
     LoginService,
     CreateUserService,
-    DatosBasicosService
+    DatosBasicosService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 declare var $: any;
 
 /*Service */
@@ -16,8 +17,8 @@ export class BasicoComponent implements OnInit {
 
   datos: any = [];
 
-  constructor(private datosBasicosService: DatosBasicosService, private router: Router) {
-    this.datosBasicosService.getDataUser(localStorage.getItem('userIdC')).subscribe(data => {
+  constructor(private datosBasicosService: DatosBasicosService, private router: Router, private cookie: CookieService) {
+    this.datosBasicosService.getDataUser(atob(cookie.get('userIdC'))).subscribe(data => {
       this.datos = data;
       console.log(data);
     });

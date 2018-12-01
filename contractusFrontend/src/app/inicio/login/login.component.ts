@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 declare var $: any;
 
 /*Service */
@@ -14,7 +15,7 @@ import { Login } from '../../models/login';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private cookie: CookieService) { }
 
     loginArray: Login[] = [];
     selectedLogin: Login = new Login();
@@ -27,14 +28,9 @@ export class LoginComponent implements OnInit {
             console.log(data)
             this.datos = data;
             if (this.datos.respuesta === 'Success') {
-                localStorage.setItem('login', 'true');
-                const primerInicio = localStorage.getItem('primerInicio');
-                if (primerInicio === 'true') {
-                    localStorage.setItem('userIdC', this.datos.id);
-                    this.router.navigate(['/perfil']);
-                } else {
-                    this.router.navigate(['/portal']);
-                }
+                this.cookie.set('login', btoa('true'));
+                this.cookie.set('userIdC', btoa(this.datos.id));
+                this.router.navigate(['/perfil']);
             } else if (this.datos.respuesta === 'Usuario y/o contraseña no son validos') {
                 this.resp = true;
             }

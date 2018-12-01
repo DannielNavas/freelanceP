@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
     "enigma-code": "0.0.11",
@@ -15,7 +16,7 @@
     "http-errors": "~1.6.2",
     "js-hibernate": "^1.0.14",
     "logger": "0.0.1",
-    "morgan": "~1.9.0",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "pug": "2.0.0-beta11"
   }
