@@ -16,6 +16,7 @@ export class PanelUsuarioComponent implements OnInit {
     salir() {
         this.cookie.delete('login');
         this.cookie.delete('userIdC');
+        sessionStorage.removeItem('currentUser');
         this.router.navigate(['/']);
     }
 

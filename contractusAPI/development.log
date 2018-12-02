@@ -293,3 +293,455 @@ info [Fri Nov 30 2018 22:03:09 GMT-0500 (Colombia Standard Time)]  Se obtiene lo
     pasword:
      '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
     documento: 0 } ] now!
+
+error [Sat Dec 01 2018 17:58:29 GMT-0500 (Colombia Standard Time)]  Falla login { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+    --------------------
+    at Protocol._enqueue (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true } error!
+error [Sat Dec 01 2018 17:58:43 GMT-0500 (Colombia Standard Time)]  Falla login { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+    --------------------
+    at Protocol._enqueue (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true } error!
+error [Sat Dec 01 2018 17:59:04 GMT-0500 (Colombia Standard Time)]  Falla login { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+    --------------------
+    at Protocol._enqueue (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true } error!
+error [Sat Dec 01 2018 18:00:41 GMT-0500 (Colombia Standard Time)]  Falla login { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+    --------------------
+    at Protocol._enqueue (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true } error!
+warn [Sat Dec 01 2018 18:02:33 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 18:02:33 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 18:06:18 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 18:07:27 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 18:07:57 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 18:08:45 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:19:15 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:20:33 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:21:20 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:22:11 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:23:17 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:25:18 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:27:32 GMT-0500 (Colombia Standard Time)]  login realizado [] now!
+error [Sat Dec 01 2018 23:27:32 GMT-0500 (Colombia Standard Time)]  Falla login TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:37:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) error!
+warn [Sat Dec 01 2018 23:27:57 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sat Dec 01 2018 23:29:38 GMT-0500 (Colombia Standard Time)]  login realizado [] now!
+error [Sat Dec 01 2018 23:29:38 GMT-0500 (Colombia Standard Time)]  Falla login TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:37:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) error!
+warn [Sat Dec 01 2018 23:29:48 GMT-0500 (Colombia Standard Time)]  login realizado [] now!
+error [Sat Dec 01 2018 23:29:48 GMT-0500 (Colombia Standard Time)]  Falla login TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:37:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) error!
+warn [Sat Dec 01 2018 23:30:23 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:30:23 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:31:41 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:32:01 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:33:47 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:34:26 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:34:50 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:35:12 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:37:06 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:37:55 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:39:19 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:40:03 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:40:10 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:40:40 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:41:52 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:42:25 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:42:53 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:43:27 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sat Dec 01 2018 23:43:53 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 00:46:10 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 00:47:44 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 00:48:19 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+error [Sun Dec 02 2018 00:48:51 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Sun Dec 02 2018 00:51:17 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Sun Dec 02 2018 00:53:03 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+error [Sun Dec 02 2018 00:53:57 GMT-0500 (Colombia Standard Time)]  Falla la obtención de datos TypeError: Cannot read property 'idusers' of undefined
+    at /home/dannielnavas/Documents/freelanceP/contractusAPI/Modules/login.js:119:27
+    at tryCatch (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/home/dannielnavas/Documents/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at process._tickCallback (internal/process/next_tick.js:61:11) fail!
+
+warn [Sun Dec 02 2018 01:02:53 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:02:53 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:06:42 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:15:09 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+warn [Sun Dec 02 2018 01:17:22 GMT-0500 (Colombia Standard Time)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:17:22 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:17:46 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:17:53 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:18:11 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:33:04 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!
+info [Sun Dec 02 2018 01:34:11 GMT-0500 (Colombia Standard Time)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'dannielnavas',
+    email: 'dannielnavas@gmail.com',
+    pasword:
+     '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
+    documento: 0 } ] now!

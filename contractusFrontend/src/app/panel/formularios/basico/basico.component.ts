@@ -5,6 +5,7 @@ declare var $: any;
 
 /*Service */
 import { DatosBasicosService } from '../../../service/datos-basicos.service';
+import { LoginPersistService } from '../../../service/persist/login.service';
 /*Models */
 import { DatosBasicos } from '../../../models/datos-basicos';
 
@@ -16,11 +17,13 @@ import { DatosBasicos } from '../../../models/datos-basicos';
 export class BasicoComponent implements OnInit {
 
   datos: any = [];
+  usserLogged: string;
 
-  constructor(private datosBasicosService: DatosBasicosService, private router: Router, private cookie: CookieService) {
+  constructor(private datosBasicosService: DatosBasicosService, private router: Router, private cookie: CookieService, private loginPersist: LoginPersistService) {
     this.datosBasicosService.getDataUser(atob(cookie.get('userIdC'))).subscribe(data => {
       this.datos = data;
-      console.log(data);
+      this.usserLogged = this.loginPersist.getUserLoggedIn();
+      console.log(this.usserLogged);
     });
 
   }

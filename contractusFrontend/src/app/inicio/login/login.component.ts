@@ -5,9 +5,10 @@ declare var $: any;
 
 /*Service */
 import { LoginService } from '../../service/login.service';
+import { LoginPersistService } from '../../service/persist/login.service';
 /*Models */
 import { Login } from '../../models/login';
-
+import { LoginPersist } from '../../models/persist/loginpersist';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,19 +16,20 @@ import { Login } from '../../models/login';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router, private cookie: CookieService) { }
+  constructor(private loginService: LoginService, private router: Router, private cookie: CookieService, private loginPersist: LoginPersistService ) { }
 
     loginArray: Login[] = [];
     selectedLogin: Login = new Login();
     datos: any = [];
     resp = false;
+    persistenciaLogin: LoginPersist;
     iniciar() {
         this.loginArray.push(this.selectedLogin);
-        console.log(this.loginArray);
         this.loginService.login(this.loginArray).subscribe(data => {
-            console.log(data)
             this.datos = data;
             if (this.datos.respuesta === 'Success') {
+                let u: LoginPersist = {email: this.datos.email}; 
+                this.loginPersist.setUserLoggedIn(u);
                 this.cookie.set('login', btoa('true'));
                 this.cookie.set('userIdC', btoa(this.datos.id));
                 this.router.navigate(['/perfil']);

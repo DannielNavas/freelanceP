@@ -15,6 +15,7 @@ export class PerfilComponent implements OnInit {
   salir() {
     this.cookie.delete('login');
     this.cookie.delete('userIdC');
+    sessionStorage.removeItem('currentUser');
     this.router.navigate(['/']);
   }
 

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { CanActivateViaAuthGuard } from './guards/can-activate-via-auth.guard';
+
 import { IndexComponent } from './inicio/index/index.component';
 import { LoginComponent } from './inicio/login/login.component';
 import { RegisterComponent } from './inicio/register/register.component';
@@ -47,31 +49,38 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    component: PerfilComponent
+    component: PerfilComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'viewofertas',
-    component: OfertasviewComponent
+    component: OfertasviewComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'ofertas',
-    component: VerOfertasComponent
+    component: VerOfertasComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'perfilProfesional',
-    component: ProfesionalComponent
+    component: ProfesionalComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'portafolio',
-    component: PortafolioComponent
+    component: PortafolioComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'contratos',
-    component: ContratosComponent
+    component: ContratosComponent,
+    canActivate: [CanActivateViaAuthGuard]
   },
   {
     path: 'facturacion',
-    component: FacturacionComponent
+    component: FacturacionComponent,
+    canActivate: [CanActivateViaAuthGuard]
   }
 ];
 
