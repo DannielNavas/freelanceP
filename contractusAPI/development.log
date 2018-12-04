@@ -745,3 +745,111 @@ info [Sun Dec 02 2018 01:34:11 GMT-0500 (Colombia Standard Time)]  Se obtiene lo
     pasword:
      '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
     documento: 0 } ] now!
+
+error [Mon Dec 03 2018 11:57:09 GMT-0500 (COT)]  Falla login { Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'admin'@'localhost' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Handshake.js:124:18)
+    at Protocol._parsePacket (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlMessage: 'Access denied for user \'admin\'@\'localhost\' (using password: YES)',
+  sqlState: '28000',
+  fatal: true } error!
+error [Mon Dec 03 2018 12:20:42 GMT-0500 (COT)]  Falla login { Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'admin'@'localhost' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Handshake.js:124:18)
+    at Protocol._parsePacket (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:118:18)
+    at Connection._implyConnect (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:453:10)
+    at Connection.query (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/Connection.js:198:8)
+    at /Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:189:20
+    at initializePromise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:567:5)
+    at new Promise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:1039:33)
+    at executeQueryPromise (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:186:12)
+    at Query.selectFunc [as select] (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/js-hibernate/lib/js-hibernate.js:211:12)
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlMessage: 'Access denied for user \'admin\'@\'localhost\' (using password: YES)',
+  sqlState: '28000',
+  fatal: true } error!
+
+warn [Mon Dec 03 2018 12:22:34 GMT-0500 (COT)]  login realizado [] now!
+error [Mon Dec 03 2018 12:22:34 GMT-0500 (COT)]  Falla login TypeError: Cannot read property 'idusers' of undefined
+    at /Users/cesar/Desktop/contract/freelanceP/contractusAPI/Modules/login.js:37:27
+    at tryCatch (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:525:12)
+    at invokeCallback (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:538:13)
+    at publish (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:508:7)
+    at flush (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/rsvp/dist/rsvp.js:2415:5)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9) error!
+info [Mon Dec 03 2018 12:24:00 GMT-0500 (COT)]  Usuario creado 1 now!
+warn [Mon Dec 03 2018 12:24:50 GMT-0500 (COT)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:24:51 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:27:07 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:27:14 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:27:44 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:36:17 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Dec 03 2018 12:36:25 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar mayorga',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
