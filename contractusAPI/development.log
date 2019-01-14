@@ -853,3 +853,33 @@ info [Mon Dec 03 2018 12:36:25 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPa
     email: 'cesarleandromayorga7@gmail.com',
     pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
     documento: 0 } ] now!
+
+info [Mon Jan 14 2019 09:06:28 GMT-0500 (GMT-05:00)]  Usuario creado 1 now!
+warn [Mon Jan 14 2019 09:07:04 GMT-0500 (GMT-05:00)]  login realizado [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword:
+     '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Jan 14 2019 09:07:04 GMT-0500 (GMT-05:00)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword:
+     '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Jan 14 2019 09:21:01 GMT-0500 (GMT-05:00)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword:
+     '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
+info [Mon Jan 14 2019 09:21:11 GMT-0500 (GMT-05:00)]  Se obtiene los datos [ RowDataPacket {
+    idusers: 1,
+    user: 'cesar',
+    email: 'cesarleandromayorga7@gmail.com',
+    pasword:
+     '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
+    documento: 0 } ] now!
