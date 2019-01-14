@@ -27,6 +27,8 @@
     "ngx-cookie-service": "^2.0.2",
     "rxjs": "~6.3.3",
     "sweetalert": "^2.1.2",
+    "truffle-contract": "^3.0.5",
+    "web3": "^0.20.7",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

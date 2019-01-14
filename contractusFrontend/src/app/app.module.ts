@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from './service/login.service';
 import { CreateUserService } from './service/create-user.service';
 import { DatosBasicosService } from './service/datos-basicos.service';
+import { EthcontractService } from './service/ethcontract.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { OfertasviewComponent } from './panel/user/ofertasview/ofertasview.compo
 import { PanelUsuarioComponent } from './panel/user/panel-usuario/panel-usuario.component';
 import { PerfilComponent } from './panel/user/perfil/perfil.component';
 import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.component';
+import { PagosComponent } from './panel/user/pagos/pagos.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.compon
     OfertasviewComponent,
     PanelUsuarioComponent,
     PerfilComponent,
-    VerOfertasComponent
+    VerOfertasComponent,
+    PagosComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { VerOfertasComponent } from './panel/user/ver-ofertas/ver-ofertas.compon
     LoginService,
     CreateUserService,
     DatosBasicosService,
-    CookieService
+    CookieService,
+    EthcontractService
   ],
   bootstrap: [AppComponent]
 })
