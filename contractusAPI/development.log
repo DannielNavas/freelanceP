@@ -746,6 +746,7 @@ info [Sun Dec 02 2018 01:34:11 GMT-0500 (Colombia Standard Time)]  Se obtiene lo
      '0d5c5c33de3d78eea6a2e835c3858f2d24b03d07acd29228d93984abf0a2a02e',
     documento: 0 } ] now!
 
+<<<<<<< Updated upstream
 error [Mon Dec 03 2018 11:57:09 GMT-0500 (COT)]  Falla login { Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'admin'@'localhost' (using password: YES)
     at Handshake.Sequence._packetToError (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
     at Handshake.ErrorPacket (/Users/cesar/Desktop/contract/freelanceP/contractusAPI/node_modules/mysql/lib/protocol/sequences/Handshake.js:124:18)
@@ -853,3 +854,5 @@ info [Mon Dec 03 2018 12:36:25 GMT-0500 (COT)]  Se obtiene los datos [ RowDataPa
     email: 'cesarleandromayorga7@gmail.com',
     pasword: '67c9982cf4b33b8b9ea54b2f3ef8cc399f26fdb7670f7928615cb44b608895f8',
     documento: 0 } ] now!
+=======
+>>>>>>> Stashed changes
